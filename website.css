@@ -1,0 +1,46 @@
+  body{
+      background-color: antiquewhite;
+    }
+    .Nav1{
+      position: fixed;
+      z-index: 5;
+      width: 100%;
+    }
+    .padd
+    {
+      padding: 30px ;
+    }
+    .card1
+    {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      padding: 20px 20px;
+    }
+    .col
+    {
+      padding: 20px;
+    }
+    .before-after
+    {
+      text-align: center;
+
+    }
+    .video{
+      text-align: center;
+    }
+    .img{
+      text-align: center;
+    }
+    .footer{
+            height: auto;
+            background:black;
+            padding:20px;
+            text-align: center;
+            color:white;
+                         }
+.order a{
+  text-decoration: none;
+}
+.order a:hover{
+  color: white;
+}

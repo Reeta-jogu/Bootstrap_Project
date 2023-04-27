@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>layout</title>
+	<link rel="stylesheet" type="text/css" href="home.css">
+
+	<!-- font family for hyderbadi pizza -->
+	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+
+	<!-- icons google link -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    /* Center the form on the page */
+    form {
+      margin: auto;
+      max-width: 500px;
+      padding: 50px;
+    }
+
+    /* Add some padding and borders to the form elements */
+    input, select {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    /* Style the submit button */
+    input[type="submit"] {
+      background-color:black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    /* Add a red border to required fields if they are empty */
+    input:required:invalid, select:required:invalid {
+      border-color: black;
+    }
+    select{
+    	border-color: black;
+    }
+    /* Add a green border to valid fields */
+    input:required:valid, select:required:valid {
+      border-color: green;
+    }
+    button{
+    	width: 100px;
+    	padding: 5px;
+    	font-size: 20px;
+    	color: white;
+    	background-color: black;
+    	border-radius: 20px;
+    }
+    button:hover{
+    	background-color:darkgray;
+    }
+
+  </style>
+</head>
+<body>
+	<div class="container-fluid">
+
+			
+			<div class="body1">
+			<div class=font>
+
+	<!-- form is started -->
+
+	<center><h1 style="font-family:sofia"><i class="fa fa-shopping-bag" style="font-size:30px;color:black"></i> &nbsp Order Form &nbsp <i class="fa fa-shopping-bag" style="font-size:30px;color:black"></i></h1></center>
+  <form id="myForm">
+
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName" required><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName" required><br>
+
+  <label for="mobile">Mobile:</label>
+  <input type="text" id="mobile" name="mobile" required><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required><br>
+
+  <label for="gender">Gender:</label>
+  <select id="gender" name="gender">
+   <option value="male">Male</option>
+   <option value="female">Female</option>
+   <option value="other">Other</option>
+  </select><br><br>
+
+  <label for="orderName">Name of Order:</label>
+  <input type="text" id="orderName" name="orderName" required><br><br>
+
+  <label for="paymentMethod">Payment Method:</label>
+  
+ 
+  <table><tr><td>
+  <label for="cod">Cash on Delivery</label></td>
+   <td><input type="radio" id="cod" name="paymentMethod" value="COD" required ></td>
+   </tr>
+
+
+  <tr><td><label for="online">Online Payment</label></td>
+   <td><input type="radio" id="cod" name="paymentMethod" value="COD" required></td></tr>
+</table>
+  <center><button type="submit">Submit</button></center>
+</form>
+
+<br><br>
+	</div></div>
+<!-- form is ended -->
+	
+<script >
+
+const form = document.querySelector('#myForm');
+
+  form.addEventListener('submit', (event) => {
+  event.preventDefault(); // prevent form from submitting and refreshing the page
+
+  const firstName = form.elements.firstName.value;
+  const lastName = form.elements.lastName.value;
+  const mobile = form.elements.mobile.value;
+  const email = form.elements.email.value;
+  const gender = form.elements.gender.value;
+  const orderName = form.elements.orderName.value;
+  const paymentMethod = form.elements.paymentMethod.value;
+
+  console.log('First Name:', firstName);
+  console.log('Last Name:', lastName);
+  console.log('Mobile:', mobile);
+  console.log('Email:', email);
+  console.log('Gender:', gender);
+  console.log('Name of Order:', orderName);
+  console.log('Payment Method:', paymentMethod);
+});
+
+</script>
+</body>
+</html>
